@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6ebdd;
+  color: #514437;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  height: 550px;
+  background-image: url("/cafe.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  color: rgb(210, 205, 197);
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.menu-button {
+  display: inline-block;
+  background-color: rgb(203, 182, 142);
+  color: rgb(94, 62, 39);
+  padding: 12px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 5px;
+}

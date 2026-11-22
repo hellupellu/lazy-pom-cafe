@@ -1,15 +1,9 @@
-import Navbar from "./components/Navbar";
-import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Navbar />
-
-      <main>
-        <h1>Welcome to Lazy Pom Cafe!</h1>
-        <p>Friendly Cafe</p>
-      </main>
+      <Home />
     </>
   );
 }

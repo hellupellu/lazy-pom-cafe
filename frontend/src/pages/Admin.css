@@ -1,0 +1,273 @@
+/* Admin layout and shared admin styles */
+
+.admin {
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
+  padding: 40px 5% 60px;
+}
+
+/* Sidebar */
+
+.admin-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-brand {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.admin-logo-link {
+  display: inline-block;
+}
+
+.admin-logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.admin-logo-link:hover {
+  transform: scale(1.05);
+}
+
+.admin-link {
+  display: block;
+  padding: 12px 17px;
+  border-radius: 5px;
+  background-color: rgb(243, 231, 217);
+  color: rgb(59, 36, 19);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.admin-link:hover {
+  background-color: rgb(230, 212, 190);
+}
+
+.admin-link.active {
+  background-color: rgb(94, 62, 39);
+  color: white;
+  border-left: 4px solid rgb(243, 231, 217);
+}
+
+.admin-link.disabled {
+  background: none;
+  border: 1px dashed rgb(203, 182, 142);
+  color: rgba(81, 68, 55, 0.5);
+  cursor: default;
+}
+
+.admin-brand {
+  margin-bottom: 15px;
+}
+
+.admin-brand h2 {
+  margin: 0;
+  color: #5e503f;
+  font-size: 24px;
+}
+
+.admin-brand p {
+  margin: 4px 0 0;
+  color: rgba(81, 68, 55, 0.7);
+}
+
+/* Content */
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #5e503f;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+}
+
+/* Summary cards */
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.admin-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: rgb(243, 231, 217);
+  color: rgb(59, 36, 19);
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.admin-card:hover {
+  background-color: rgb(230, 212, 190);
+  transform: translateY(-2px);
+}
+
+.admin-card span {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.admin-card strong {
+  font-size: 48px;
+  color: #5e503f;
+}
+
+/* Panels */
+
+.admin-panel {
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: rgb(243, 231, 217);
+}
+
+.admin-panel h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  color: #5e503f;
+}
+
+.admin-description {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(81, 68, 55, 0.8);
+}
+
+/* Tables */
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th {
+  padding: 10px 12px;
+  border-bottom: 2px solid rgb(203, 182, 142);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(59, 36, 19);
+}
+
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(94, 80, 63, 0.2);
+  vertical-align: middle;
+}
+
+.admin-empty {
+  padding: 30px 12px;
+  text-align: center;
+  color: rgba(81, 68, 55, 0.7);
+}
+
+/* Accessibility */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Buttons */
+
+.admin-button {
+  background-color: rgb(94, 62, 39);
+  color: white;
+  border: none;
+  padding: 10px 17px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: rgb(125, 88, 62);
+}
+
+.admin-button.secondary {
+  background-color: rgb(203, 182, 142);
+  color: rgb(94, 62, 39);
+}
+
+.admin-button.secondary:hover {
+  background-color: rgb(216, 197, 160);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .admin {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+  }
+
+  .admin-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

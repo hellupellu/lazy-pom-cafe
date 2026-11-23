@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "./Navbar.css";
 const logo = "/lazypomlogo.png";
 
@@ -5,9 +6,9 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <nav className="navbar-left">
-        <a href="#home" className="underline">
+        <Link to="/" className="underline">
           Home
-        </a>
+        </Link>
         <a href="#gallery" className="underline">
           Gallery
         </a>
@@ -16,20 +17,20 @@ const Navbar = () => {
         </a>
       </nav>
 
-      <a href="/" className="navbar-logo">
+      <Link to="/" className="navbar-logo">
         <img src={logo} alt="Lazy Pom Cafe logo"></img>
-      </a>
+      </Link>
 
       <nav className="navbar-right">
-        <a href="/shop" className="underline">
+        <Link to="/shop" className="underline">
           Shop
-        </a>
-        <a href="/cart" className="underline">
+        </Link>
+        <Link to="/cart" className="underline">
           View cart
-        </a>
-        <a href="/login" className="login-button">
+        </Link>
+        <Link to="/login" className="login-button">
           Log in
-        </a>
+        </Link>
       </nav>
     </header>
   );
